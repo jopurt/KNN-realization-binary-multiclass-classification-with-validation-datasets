@@ -140,14 +140,12 @@ class KNN:
 
             # print('indeces',indices)
 
-            # Получить метки классов соседей
             # Get labels of nearest classes
             nearest_labels = self.train_y[indices]
 
             # print('nearest_labels',nearest_labels)
 
-            # Определить наиболее частый класс (если равенство — взять минимальный)
-            # Find the most popular class
+            # Find the most popular class (if there is equality, take the minimum)
             class_counts = np.bincount(nearest_labels)
 
             # print('class_counts',class_counts)
